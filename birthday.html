@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Birthday paradox</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="birthday.css">
+    </head>
+    <body>
+
+        <div class="page">
+            <header class="header">
+                <p class="title" >Birthday paradox</p>
+            </header>
+
+
+            <article class="article">
+                <h1>Birthday paradox</h1>
+                <p class="article-paragraph">
+                    This page is about one particular statistic which is in a group of 23 people there is more than 50 percent of chance that two people share the same birthday. 
+                    You may have noticed that we are 23 students in the Slack channel so this is relevant in our case and not just to show off.
+                    There are a few assumptions like there is the same number of person born every day. In reality there are big difference even between months.
+                </p>
+                <p class="article-paragraph">
+                   Let's say the probability is called P(n) with n being the number of people. 
+                   To simplify, we can compute its oppose W(n) which is the probability that no pair has a commom birthday and P(n) = 1 - W(n).
+                </p>
+                <p class="article-paragraph">
+                    If we take one person born August 8th, W(n) = <sup>365</sup>&frasl;<sub>365</sub> = 100%. 
+                    If we add a second person, this one must be born any day except August 8th so, there is a <sup>364</sup>&frasl;<sub>365</sub> probability. 
+                    So in total, the chance of the two having different birthday is <sup>365</sup>&frasl;<sub>365</sub>.<sup>364</sup>&frasl;<sub>365</sub> = 99.73 percent. 
+                    Not likely at all as you would expect.
+                </p>
+
+                <p class="article-paragraph">
+                    Let's go further by adding a third person which the probability would be <sup>363</sup>&frasl;<sub>365</sub>. 
+                    Each time we add a person we subtract one to the numerator because one more date is taken and the denominator stays the same. We can now generalize :
+                </p>
+
+                <p class="article-paragraph">
+                     W(n) =  <sup>365</sup>&frasl;<sub>365</sub>.<sup>364</sup>&frasl;<sub>365</sub>.<sup>363</sup>&frasl;<sub>365</sub>....<sup>365-(n-1)</sup>&frasl;<sub>365</sub><br/>
+                     W(23) =  <sup>365</sup>&frasl;<sub>365</sub>.<sup>364</sup>&frasl;<sub>365</sub>.<sup>363</sup>&frasl;<sub>365</sub>....<sup>343</sup>&frasl;<sub>365</sub> = 49.3 percent<br/>
+                     P(23) = 1 - 0.493 = 50.7 percent
+                </p>
+
+                <p>
+                    This concludes the proof. Hoping, it did not give you headache. 
+                    When we are in person, let's see if there is a match.
+                </p>
+
+
+            </article>
+
+
+            <footer class="footer">
+                <p>Unlicensed code made by Romain Vandemaele</p>
+                <p><a href="mailto:romain.v@live.be">romain.v@live.be</a></p>
+                <a href="https://github.com/RomainVandemaele/SwicthfullyAssignments"><img src="images/github-mark.svg" alt="github logo" height="30"></a>
+                <a href="www.linkedin.com/in/romain-vandemaele">   <img src="images/LinkedIn_icon.svg" alt="linkedin logo" height="30">              </a>
+            </footer>
+
+        </div>
+
+    </body>
+
+       
+</html>

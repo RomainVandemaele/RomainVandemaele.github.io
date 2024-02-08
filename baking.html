@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Romain Vandemaele Github</title>
+        <title>Baking code</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="baking.css">
     </head>
@@ -16,6 +16,8 @@
 
             <article class="article">
                 <h1>Lemon crinkles</h1>
+                <p classs = "article-paragraph"> A programm is a list of instructions to execute in order. Does it sounds pretty similar to a recipe so let's try : </p>
+                <br/>
                 <div class="box">
                     <pre>
                     <code>
@@ -25,11 +27,12 @@
     
         <span class="keyword1">public</span> <span class="keyword4">LemonCrinkles</span>(Pantry pantry) {
     
-            //unit in gr or ml for liquids
+            
+            <span class="keyword6">unit in gr or ml for liquids</span>
             ingredients.<span class="keyword3">put</span>("flour", 300);
             ingredients.<span class="keyword3">put</span>("butter", 100);
             ingredients.<span class="keyword3">put</span>("egg", 1);
-            ingredients.<span class="keyword3">put</span>("lemon juice", 150);
+            ingredients.<span class="keyword3">put</span>("lemon juice", 100);
             ingredients.<span class="keyword3">put</span>("baking soda", 5);
             ingredients.<span class="keyword3">put</span>("granulated sugar", 300);
             ingredients.<span class="keyword3">put</span>("caster sugar", 15);
@@ -44,7 +47,7 @@
             <span class="keyword1">this</span>  = oven.<span class="keyword3">pop</span>(); 
             oven.<span class="keyword3">turnOff</span>();
     
-            <span class="keyword1">this</span>.<span class="keyword3">eat</span>(); //munch mumch
+            <span class="keyword1">this</span>.<span class="keyword3">eat</span>(); <span class="keyword6">//munch mumch</span> 
         }
     
     
@@ -73,7 +76,7 @@
             prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("granulated sugar") );
             prep.<span class="keyword3">whisk</span>();
     
-            prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("lemon") );
+            prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("lemon juice") );
             prep.<span class="keyword3">whisk</span>();
     
             Fridge fridge = <span class="keyword2">new</span>  preps Frigde();
@@ -81,7 +84,7 @@
             <span class="keyword3">wait</span>(30*60);
             prep = fridge.<span class="keyword3">pop</span>();
     
-            Preparation[] preps = prep.<span class="keyword3">divide</span>(20); //divide in 20 smaller ball
+            Preparation[] preps = prep.<span class="keyword3">divide</span>(20); <span class="keyword6">//divide in 20 smaller ball</span>
             preps.<span class="keyword3">forAll</span>( prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("caster sugar") ) );
             fridge.<span class="keyword3">put</span>(preps);
             <span class="keyword3">wait</span>(30*60);
@@ -97,6 +100,8 @@
                     </pre>
 
                 </div>
+
+                
             </article>
 
        
