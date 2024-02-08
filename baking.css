@@ -1,0 +1,50 @@
+
+
+html,body, .page {
+    height: auto;
+  }
+
+
+.header, .footer {
+    background-color: #7F27FF;
+}
+
+.article {
+    background-color: #9F70FD;
+}
+
+.box {
+
+    height: fit-content;
+
+    color: #ffffff;
+    border: 1px solid saddlebrown;
+    border-radius: 15px;
+    background-color:  	#3e3e42;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.keyword1 {
+    color: red;
+}
+
+.keyword2 {
+    color: violet;
+}
+
+.keyword3 {
+    color: lightblue;
+}
+
+.keyword4 {
+    color: green;
+}
+
+.keyword5 {
+    color: lightgreen;
+}

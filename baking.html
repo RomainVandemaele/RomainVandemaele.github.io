@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Romain Vandemaele Github</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="baking.css">
+    </head>
+    <body>
+
+        <div class="page">
+            <header class="header">
+                <p class="title" >Baking</p>
+            </header>
+
+
+            <article class="article">
+                <h1>Lemon crinkles</h1>
+                <div class="box">
+                    <pre>
+                    <code>
+    <span class="keyword2">class</span>  LemonCrinkles {
+
+        <span class="keyword3">HashMap <String, Integer></span>ingredients = <span class="keyword2">new</span>  <span class="keyword3">HashMap <String, Integer></span>();
+    
+        <span class="keyword1">public</span> <span class="keyword4">LemonCrinkles</span>(Pantry pantry) {
+    
+            //unit in gr or ml for liquids
+            ingredients.<span class="keyword3">put</span>("flour", 300);
+            ingredients.<span class="keyword3">put</span>("butter", 100);
+            ingredients.<span class="keyword3">put</span>("egg", 1);
+            ingredients.<span class="keyword3">put</span>("lemon juice", 150);
+            ingredients.<span class="keyword3">put</span>("baking soda", 5);
+            ingredients.<span class="keyword3">put</span>("granulated sugar", 300);
+            ingredients.<span class="keyword3">put</span>("caster sugar", 15);
+    
+            <span class="keyword3">fetchIngredients(Pantry)</span>;
+            Oven = <span class="keyword2">new</span>  Oven();
+            oven.preheat(180);
+    
+            Preparation[]  preps = <span class="keyword3">Prepmaker</span>();
+            oven.<span class="keyword3">put</span>(preps);
+            <span class="keyword3">wait</span>(20*60); //20 min
+            <span class="keyword1">this</span>  = oven.<span class="keyword3">pop</span>(); 
+            oven.<span class="keyword3">turnOff</span>();
+    
+            <span class="keyword1">this</span>.<span class="keyword3">eat</span>(); //munch mumch
+        }
+    
+    
+        <span class="keyword1">public</span>  <span class="keyword2">void</span>  <span class="keyword4">fetchIngredients</span>(Pantry pantry) {
+    
+            for (Entry<String,Integer> ingredient : ingredients.<span class="keyword3">entrySet</span>()) {
+                <span class="keyword2">try</span>  {
+                    pantry.<span class="keyword3">fetch</span>(ingredient.<span class="keyword3">getKey</span>(), ingredient.<span class="keyword3">getValue</span>());
+                }<span class="keyword2">catch</span>  ( <span class="keyword3">IngredientNotFoundException</span> e ) {
+                    <span class="keyword2">throw new</span>  <span class="keyword3">RuntimeException</span>("Go to supermarket");
+                }<span class="keyword2">catch</span>  (<span class="keyword3">IngredientQuantityInsufficientException</span> e) {
+                    <span class="keyword2">throw new</span>  <span class="keyword3">RuntimeException</span>("Go to supermarket");
+                }
+            }
+        }
+    
+        <span class="keyword1">public</span> Preparation[] <span class="keyword4">crinklesMaker</span>() {
+            Preparation prep = <span class="keyword2">new</span> <span class="keyword3">Preparation</span>();
+    
+            prep.<span class="keyword3">add</span>( ingredients.get("butter") );
+            prep.<span class="keyword3">add</span>( ingredients.get("egg") );
+            prep.whisk();
+    
+            prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("flour") );
+            prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("baking soda") );
+            prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("granulated sugar") );
+            prep.<span class="keyword3">whisk</span>();
+    
+            prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("lemon") );
+            prep.<span class="keyword3">whisk</span>();
+    
+            Fridge fridge = <span class="keyword2">new</span>  preps Frigde();
+            Fridge.<span class="keyword3">put</span>(prep);
+            <span class="keyword3">wait</span>(30*60);
+            prep = fridge.<span class="keyword3">pop</span>();
+    
+            Preparation[] preps = prep.<span class="keyword3">divide</span>(20); //divide in 20 smaller ball
+            preps.<span class="keyword3">forAll</span>( prep.<span class="keyword3">add</span>( ingredients.<span class="keyword3">get</span>("caster sugar") ) );
+            fridge.<span class="keyword3">put</span>(preps);
+            <span class="keyword3">wait</span>(30*60);
+            preps = fridge.<span class="keyword3">pop</span>();
+    
+            <span class="keyword2">return</span>  preps;
+    
+        }
+            
+                        
+    }                       
+                    </code>
+                    </pre>
+
+                </div>
+            </article>
+
+       
+            <footer class="footer">
+                <p>Unlicensed code made by Romain Vandemaele</p>
+                <p><a href="mailto:romain.v@live.be">romain.v@live.be</a></p>
+                <a href="https://github.com/RomainVandemaele/SwicthfullyAssignments"><img src="images/github-mark.svg" alt="github logo" height="30"></a>
+                <a href="www.linkedin.com/in/romain-vandemaele">   <img src="images/LinkedIn_icon.svg" alt="linkedin logo" height="30">              </a>
+            </footer>
+
+        </div>
+
+    </body>
+
+       
+</html>
